@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>documentation</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style type="text/css">
+	.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: white;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    
+    
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #67326b;
+        display: block;
+       border-style: solid;
+       margin-bottom: 5px;
+
+   
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: black;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+background-color: #dbbcdd;
+
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+.main-section header {
+	font-size: 50px;
+	font-weight: bold;
+
+}
+.main-section {
+	padding-top: 30px;
+
+}
+.main-section p {
+	font-size: 20px;
+}
+.main-section header {
+	color: white;
+}
+.main-section h2 {
+	color: white;
+}
+
+
+.main-section code {
+	font-weight: bold;
+}
+#style-code {
+	background-color:lightblue;
+	 margin: 0 auto; 
+	  overflow-x: scroll;
+	   width:900px;
+	   height: 80px;
+	   justify-content: center; 
+}
+
+#style-code2 {
+	background-color:lightblue;
+	 margin: 0 auto; 
+	  overflow-x: scroll;
+	   width:900px;
+	   height: 300px;
+	   justify-content: center; 
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+ <!-- Side navigation -->
+<nav class="sidenav" id="navbar">
+	<div style="background-color:#c1bbc1;">
+	<header style="color: white;  padding-top: 10px;">Get started with</header>
+	<img src="img/bootstrap.png" style="margin-left:70px; width: 40%"></div>
+  <a href="#introduction" class="nav-link">Introduction</a>
+  <a class="nav-link" href="#layout">Layout</a>
+  <a class="nav-link"href="#content">Content</a>
+    <a class="nav-link"href="#migrating_to_v4">Migration</a>
+
+  <a class="nav-link" href="#about">About</a>
+</nav>
+
+<!-- Page content -->
+<main class="main"  id="main-doc">
+	<section class="main-section" id="introduction">
+		<header>Introduction</header>
+		<p>Get started with Bootstrap, the world's most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.</p>
+
+		<h2> Quick start </h2>
+		<p>Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath.</p>
+          <h2>CSS</h2>
+          <p>Copy-paste the stylesheet &lt link &gt into your &lthead&gt before all other stylesheets to load our CSS.<br>
+          	 </p>
+          	 <pre><code class="language-html">
+          	 &ltlink rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></code></pre>
+<br>
+          	  <h2>JS</h2>
+          <p>Many of our components require the use of JavaScript to function. Specifically, they require jQuery, Popper.js, and our own JavaScript plugins. Place the following &ltscript&gts near the end of your pages, right before the closing &lt/body&gt tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.<br>
+
+We use jQuery's slim build, but the full version is also supported.<br>
+          	 </p>
+          	    <pre><code class="language-html">
+          	    	&ltscript src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+&ltscript src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">&lt/script>
+&ltscript src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">&lt/script></code></pre>
+
+
+
+<p>Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template. Our bootstrap.bundle.js and bootstrap.bundle.min.js include Popper, but not jQuery. For more information about what’s included in Bootstrap, please see our <a href="https://getbootstrap.com/docs/4.1/getting-started/contents/#precompiled-bootstrap">contents</a> section.</p>
+
+<br>
+<h2>Starter template</h2>
+          <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:<br>
+          	 </p>
+          	           	 <pre><code class="language-html">&lt!doctype html>
+&lthtml lang="en">
+  &lthead>
+    &lt!-- Required meta tags -->
+    &ltmeta charset="utf-8">
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    &lt!-- Bootstrap CSS -->
+    &ltlink rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    &lttitle>Hello, world!&lt/title>
+  &lt/head>
+  <&ltbody>
+    <&lth1>Hello, world!&lt/h1>
+
+    &lt!-- Optional JavaScript -->
+    &lt!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    &ltscript src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">&lt/script>
+    &ltscript src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">&lt/script>
+    &ltscript src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">&lt/script>
+  &lt/body>
+&lt/html>
+	
+</code></pre>
+
+<br>
+	</section>
+
+	<section class="main-section" id="layout">
+				<header>layout</header>
+				<h2>Overview</h2>
+				<p>Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p>
+				<br>
+				<h2>Containers</h2>
+				<p>Containers are the most basic layout element in Bootstrap and <strong>are required when using our default grid system</strong>. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+
+While containers can be nested, most layouts do not require a nested container.
+</p>
+
+<div class="container" style="		 margin: 0 auto; 
+ width: 40% ; padding-top: 20px; padding-bottom: 20px;">
+	<div class="row" >
+	<div class="col-lg-9"  style="background-color: purple; width:200px; height: 100px; border-radius: 5px; margin-right: 7px;  ">
+</div>
+<div class="col-lg-3" style="background-color: blue; width:70px; height: 100px; border-radius: 5px;  ">
+</div>
+	</div>
+</div>
+
+
+<pre><code class="language-html">
+	&ltdiv class="container">
+  &lt!-- Content here -->
+&lt/div>
+	</code></pre>
+
+<br>
+<p>Use <strong>.container-fluid</strong> for a full width container, spanning the entire width of the viewport.</p>
+
+<div class="container" style=" margin-left: 200px;padding-top: 20px; padding-bottom: 20px;">
+	<div class="row" >
+	<div class="col-lg-9"  style="background-color: purple; width:500px; height: 100px; border-radius: 5px; margin-right: 7px;  ">
+</div>
+<div class="col-lg-3" style="background-color: blue; width:70px; height: 100px; border-radius: 5px;  ">
+</div>
+	</div>
+</div>
+<br>
+
+<pre><code class="language-html">
+	&ltdiv class="container-fluid">
+  &lt!-- Content here -->
+&lt/div>
+	</code></pre>
+	<br>
+
+	<h2>Responsive breakpoints</h2>
+				<p>Since Bootstrap is developed to be mobile first, we use a handful of <strong>media queries</strong> to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+
+Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.</p>
+				<br>
+
+				<pre><code class="language-css">
+	// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+	</code></pre>
+
+
+	</section>
+
+	<section class="main-section" id="content">
+				<header>content</header>
+				<h2>Reboot</h2><br>
+				<p>Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.</p><br>
+				<h2>Approach</h2><br>
+				<p>Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some &lttable> styles for a simpler baseline and later provide .table, .table-bordered, and more.
+
+Here are our guidelines and reasons for choosing what to override in Reboot:
+<ul style="font-size:20px;">
+    <li>Update some browser default values to use rems instead of ems for scalable component spacing.</li>
+    <li>Avoid margin-top. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of margin is a simpler mental model.</li>
+   <li> For easier scaling across device sizes, block elements should use rems for margins.</li>
+   <li> Keep declarations of font-related properties to a minimum, using inherit whenever possible.</li>
+    </ul>
+</p><br>
+
+<h2>Page defaults</h2>
+<p>The <html> and <body> elements are updated to provide better page-wide defaults. More specifically:
+<ul style="font-size:20px;">
+   <li> The box-sizing is globally set on every element—including *::before and *::after, to border-box. This ensures that the declared width of element is never exceeded due to padding or border.
+       <ul> <li>No base font-size is declared on the &lthtml>, but 16px is assumed (the browser default). font-size: 1rem is applied on the &ltbody> for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.</li></ul></li>
+    <li>The &ltbody> also sets a global font-family, line-height, and text-align. This is inherited later by some form elements to prevent font inconsistencies.</li>
+   <li> For safety, the &ltbody> has a declared background-color, defaulting to #fff.</li>
+</p>
+
+<br>
+
+<h2>Headings and paragraphs</h2>
+<p>All heading elements—e.g., &lth1>—and &ltp> are reset to have their margin-top removed. Headings have margin-bottom: .5rem added and paragraphs margin-bottom: 1rem for easy spacing.</p><br>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Heading</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+   <tbody>
+  <tr>
+      <td>&lth1>&lt/h1></td>
+      <td><h1>h1. Bootstrap heading</h1></td>
+    </tr>
+     <tr>
+     
+      <td>&lth2>&lt/h2></td>
+      <td><h2 style="color: black;">h2. Bootstrap heading</h2></td>
+     
+    </tr>
+     <tr>
+     
+      <td>&lth3>&lt/h3></td>
+      <td><h3>h3. Bootstrap heading</h3></td>
+     
+    </tr>
+     <tr>
+     
+      <td>&lth4>&lt/h4></td>
+      <td><h4>h4. Bootstrap heading</h4></td>
+     
+    </tr>
+     <tr>
+     
+      <td>&lth5>&lt/h5></td>
+      <td><h5>h5. Bootstrap heading</h5></td>
+     
+    </tr>
+<tr>
+     
+      <td>&lth6>&lt/h6></td>
+      <td><h6>h6. Bootstrap heading</h6></td>
+     
+    </tr>
+</tbody>
+</table>
+	</section>
+
+	<section class="main-section" id="migrating_to_v4">
+				<header>migrating to v4</header>
+				<p>Bootstrap4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.</p>
+				<br>
+				<h2>Stable changes</h2>
+				<p>Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, but there are some notable changes.</p>
+				<h2>Printing</h2>
+				<p>
+<ul style="font-size:20px;">
+    <li>Fixed broken print utilities. Previously, using a .d-print-* class would unexpectedly overrule any other .d-* class. Now, they match our other display utilities and only apply to that media (@media print).</li>
+
+  <li> Expanded available print display utilities to match other utilities. Beta 3 and older only had block, inline-block, inline, and none. Stable v4 added flex, inline-flex, table, table-row, and table-cell.</li>
+
+   <li> Fixed print preview rendering across browsers with new print styles that specify @page size.</li></ul>
+</p>
+<h2>Beta 3 changes</h2>
+<p>While Beta 2 saw the bulk of our breaking changes during the beta phase, but we still have a few that needed to be addressed in the Beta 3 release. These changes apply if you’re updating to Beta 3 from Beta 2 or any older version of Bootstrap.</p>
+
+<h2>Miscellaneous</h2>
+<p>
+	<ul style="font-size:20px;">
+		<li>
+    Removed the unused $thumbnail-transition variable. We weren’t transitioning anything, so it was just extra code.</li>
+   <li> The npm package no longer includes any files other than our source and dist files; if you relied on them and were running our scripts via the node_modules folder, you should adapt your workflow.</li>
+
+	</ul>
+
+</p>
+
+<h2>Forms</h2>
+<p>
+	<ul style="font-size:20px;">
+		
+
+ <li>Rewrote both custom and default checkboxes and radios. Now, both have matching HTML structure (outer &ltdiv> with sibling &ltinput> and &ltlabel>) and the same layout styles (stacked default, inline with modifier class). This allows us to style the label based on the input’s state, simplifying support for the disabled attribute (previously requiring a parent class) and better supporting our form validation.
+
+    As part of this, we’ve changed the CSS for managing multiple background-images on custom form checkboxes and radios. Previously, the now removed .custom-control-indicator element had the background color, gradient, and SVG icon. Customizing the background gradient meant replacing all of those every time you needed to change just one. Now, we have .custom-control-label::before for the fill and gradient and .custom-control-label::after handles the icon.
+
+    To make a custom check inline, add .custom-control-inline.</li>
+
+   <li> Updated selector for input-based button groups. Instead of [data-toggle="buttons"] { } for style and behavior, we use the data attribute just for JS behaviors and rely on a new .btn-group-toggle class for styling.</li>
+
+   <li> Removed .col-form-legend in favor of a slightly improved .col-form-label. This way .col-form-label-sm and .col-form-label-lg can be used on &ltlegend> elements with ease.</li>
+
+   <li> Custom file inputs received a change to their $custom-file-text Sass variable. It’s no longer a nested Sass map and now only powers one string—the Browse button as that is now the only pseudo-element generated from our Sass. The Choose file text now comes from the .custom-file-label.</li>
+
+	</ul>
+</p>
+	</section>
+
+	<section class="main-section" id="about">
+				<header>about</header>
+				<p>Learn more about the team maintaining Bootstrap, how and why the project started, and how to get involved.</p>
+				<h2>Team</h2>
+				<p>Bootstrap is maintained by a small team of developers on GitHub. We’re actively looking to grow this team and would love to hear from you if you’re excited about CSS at scale, writing and maintaining vanilla JavaScript plugins, and improving build tooling processes for frontend code.</p>
+				<h2>History</h2>
+				<p>Originally created by a designer and a developer at Twitter, Bootstrap has become one of the most popular front-end frameworks and open source projects in the world.
+
+Bootstrap was created at Twitter in mid-2010 by @mdo and @fat. Prior to being an open-sourced framework, Bootstrap was known as Twitter Blueprint. A few months into development, Twitter held its first Hack Week and the project exploded as developers of all skill levels jumped in without any external guidance. It served as the style guide for internal tools development at the company for over a year before its public release, and continues to do so today.
+
+Originally released on Friday, August 19, 2011, we’ve since had over twenty releases, including two major rewrites with v2 and v3. With Bootstrap 2, we added responsive functionality to the entire framework as an optional stylesheet. Building on that with Bootstrap 3, we rewrote the library once more to make it responsive by default with a mobile first approach.
+
+With Bootstrap 4, we once again rewrote the project to account for two key architectural changes: a migration to Sass and the move to CSS’s flexbox. Our intention is to help in a small way to move the web development community forward by pushing for newer CSS properties, fewer dependencies, and new technologies across more modern browsers.</p>
+
+<h2>Get involved</h2>
+<p>Get involved with Bootstrap development by opening an issue or submitting a pull request. Read our contributing guidelines for information on how we develop.</p>
+
+
+	</section>
+  ...
+</main> 
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+</body>
+</html>
